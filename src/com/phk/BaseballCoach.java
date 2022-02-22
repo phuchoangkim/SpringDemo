@@ -21,5 +21,13 @@ public class BaseballCoach implements ICoach {
 	public String getDailyFortune() {
 		return _fortuneService.getFortune();
 	}
+	
+	public void init() {
+		System.out.println("Init Baseball Coach");
+	}
+	
+	public void destroy() {
+		System.out.println("Destroy Baseball Coach");
+	}
 
 }
