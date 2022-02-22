@@ -11,7 +11,7 @@ public class SetterDemoApp {
 
 		System.out.println(coach.getDailyCoaching());
 		System.out.println(coach.getDailyFortune());
-
+		System.out.println(coach.getName());
 		context.close();
 	}
 }

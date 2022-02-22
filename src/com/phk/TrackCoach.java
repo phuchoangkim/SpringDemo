@@ -2,16 +2,26 @@ package com.phk;
 
 public class TrackCoach implements ICoach {
 
-	private IFortuneService fortuneService;
-
+	private IFortuneService _fortuneService;
+	
+	private String _name;
+	
 	public TrackCoach() {
 
 	}
 	
 	public void setFortuneService(IFortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+		this._fortuneService = fortuneService;
 	}
 
+	public void setName(String name) {
+		this._name = name;
+	}
+	
+	public String getName() {
+		return this._name;
+	}
+	
 	@Override
 	public String getDailyCoaching() {
 		return "This is Track Coach";
@@ -19,8 +29,7 @@ public class TrackCoach implements ICoach {
 
 	@Override
 	public String getDailyFortune() {
-		
-		return fortuneService.getFortune();
+		return _fortuneService.getFortune();
 	}
 
 }

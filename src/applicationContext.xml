@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:property-placeholder location="classpath:data.phk"/>
+	
 	<bean id="myHappyFortuneService" class="com.phk.HappyFortuneService">
 	</bean>
 
@@ -20,7 +22,10 @@
 
 	<bean id="myTrackCoach" class="com.phk.TrackCoach">
 		<property name="fortuneService" ref="myLuckyFortuneService" />
+		<property name="name" value="${name}"></property>
 	</bean>
+	
+	
 </beans>
 
 
